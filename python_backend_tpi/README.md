@@ -26,3 +26,7 @@ Se recorren productos con `for`, se filtran los de bajo stock y se calcula el pr
 ```powershell
 python app.py
 ```
+
+## Archivos CSV y JSON
+
+El programa también carga `datos.csv`, convierte los campos numéricos y guarda el resultado en `salida.json`.

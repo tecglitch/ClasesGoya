@@ -1,15 +1,22 @@
-# Preparación del entorno — Clase 1, Parte 1
+# Clase 1 - Python, CSV, JSON y validación modular
 
-Este directorio contiene el ejercicio de Python del curso.
+## Qué se completó
 
-## Requisitos
+- Preparación del proyecto y entorno virtual Python.
+- Lista de productos, recorrido con `for`, filtro de stock menor a 10 y promedio de precios.
+- Lectura de `datos.csv` con `csv.DictReader`, `with` y conversión de campos numéricos.
+- Conversión de CSV a JSON en `salida.json`.
+- Validación de JSON y de precios numéricos en `validar_productos.py`.
+- Demostración de un dato inválido en `salida_corrupta.json`; la salida correcta se conserva en `salida.json`.
+- Modularización pedida en la Parte 4: `validar_datos()` devuelve los datos válidos o `None`.
 
-- Python 3.10 o superior.
-- Visual Studio Code (opcional).
+## Requisitos del entorno
 
-## Crear el entorno virtual
+Python 3.10 o superior (la consigna de la Parte 1 admite 3.9+; el compendio recomienda 3.10+). VS Code está instalado. El editor de código puede elegirse según las preferencias de cada persona.
 
-Desde esta carpeta, en PowerShell:
+## Crear y activar el entorno virtual en Windows PowerShell
+
+Desde esta carpeta:
 
 ```powershell
 python -m venv .venv
@@ -17,16 +24,21 @@ python -m venv .venv
 python --version
 ```
 
-El ejercicio utiliza la biblioteca estándar de Python y no necesita instalar paquetes externos.
+En CMD, activarlo con `.venv\Scripts\activate.bat`. El ejercicio solo usa módulos de la biblioteca estándar, por lo que no requiere `pip install`.
 
-## Ejercicio de Python
-
-Se recorren productos con `for`, se filtran los de bajo stock y se calcula el precio promedio. Ejecutar con:
+## Ejecutar
 
 ```powershell
 python app.py
 ```
 
-## Archivos CSV y JSON
+La ejecución vuelve a generar `salida.json` (válido) y `salida_corrupta.json` (fixture para practicar el manejo de errores). La validación del archivo correcto imprime `Validación exitosa`; la del archivo corrupto explica el error y retorna `None`.
 
-El programa también carga `datos.csv`, convierte los campos numéricos y guarda el resultado en `salida.json`.
+## Estructura
+
+- `app.py`: datos en memoria, CSV, promedio y conversión a JSON.
+- `validar_productos.py`: validador modular.
+- `datos.csv`: datos de entrada.
+- `salida.json`: datos válidos de salida.
+- `salida_corrupta.json`: demostración de precio no numérico.
+

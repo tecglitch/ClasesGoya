@@ -1,0 +1,11 @@
+venv/
+.venv/
+.env
+.env.*
+db.sqlite3
+security.log
+import.log
+staticfiles/
+.git/
+__pycache__/
+*.py[cod]

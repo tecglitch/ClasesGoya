@@ -18,3 +18,11 @@ python --version
 ```
 
 El ejercicio utiliza la biblioteca estándar de Python y no necesita instalar paquetes externos.
+
+## Ejercicio de Python
+
+Se recorren productos con `for`, se filtran los de bajo stock y se calcula el precio promedio. Ejecutar con:
+
+```powershell
+python app.py
+```
